@@ -13,7 +13,7 @@ To load the model you will need Python 3.5 and the [gensim](https://radimrehurek
 from gensim.models.keyedvectors import KeyedVectors
 word_vect = KeyedVectors.load_word2vec_format("vulner_embedding.bin", binary=True)
 ```
-###Querying the model
+### Querying the model
 
 Examples of semantic similarity queries
 ```
