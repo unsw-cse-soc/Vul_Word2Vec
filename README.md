@@ -1,6 +1,5 @@
 # Vul_Word2vec
-A word2vec model trained on Vulners, {add if others}
-
+A word2vec model trained on multiple heterogeneous sources including Vulners, English Wikipedia, Information Security Stack Exchange Q&As, Common Weakness Enumeration (CWE) and Stack Overﬂow.
 ## Model file
 The the pre-trained model is stored in a .bin file (of approximate size 160 MB).
 
