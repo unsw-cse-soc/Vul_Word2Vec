@@ -1,18 +1,21 @@
-# Vul_Word2vec
-A word2vec model trained on multiple heterogeneous sources including Vulners, English Wikipedia (Security category), Information Security Stack Exchange Q&As, Common Weakness Enumeration (CWE) and Stack Overﬂow.
-## Model file
-The the pre-trained model is stored in a .bin file (of approximate size 160 MB).
+# Word Representation for Cyber Security Vulnerability Domain
+This repo provides a word representation (SecVuln_WE) and a dataset for benchmarking word similarity and relatedness for cyber security vulnerability domain. 
 
-## Instructions on how to use the model
-### Prerequisites
+## SecVuln_WE
+A word2vec model trained on multiple heterogeneous sources including Vulners, English Wikipedia (Security category), Information Security Stack Exchange Q&As, Common Weakness Enumeration (CWE) and Stack Overﬂow.
+### Model file
+The pre-trained WE (SecVuln) is stored in a .bin file (of approximate size 160 MB).
+
+### Instructions on how to use the model
+#### Prerequisites
 To load the model you will need Python 3.5 and the [gensim](https://radimrehurek.com/gensim/) library.
 
-### Loading the model
+#### Loading the model
 ```
 from gensim.models.keyedvectors import KeyedVectors
 word_vect = KeyedVectors.load_word2vec_format("vulner_embedding.bin", binary=True)
 ```
-### Querying the model
+#### Querying the model
 
 Examples of semantic similarity queries
 ```
