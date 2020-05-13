@@ -19,20 +19,28 @@ word_vect = KeyedVectors.load_word2vec_format("vulner_embedding.bin", binary=Tru
 
 Examples of semantic similarity queries
 ```
-words=['cve','patch','sql']
+words=['vulnerability','patch']
 for w in words:
     try:
-        print(word_vect.most_similar(w))
+        print(word_vect.most_similar(w)[:5])
     except KeyError as e:
             print(e)
+>> [(u'vulnerabilities', 0.889), (u'bug', 0.786), (u'flaw', 0.742), (u'exploit', 0.740), (u'issues', 0.739)]
+>> [(u'patches', 0.816), (u'updates', 0.707), (u'fixes', 0.702), (u'fix', 0.688), (u'upgrade', 0.667)]
+```
+```
+print(word_vect.similarity('bug', 'flaw'))
+>> 0.72691536
 ```
 ```
 print(word_vect.doesnt_match("exploit attack weakness python".split()))
+>> python
 ```
 Examples of analogy queries
 
 ```
 print(word_vect.most_similar(positive=['exploit', 'title'], negative=['ubuntu']))
+>> [(u'vulnerability', 0.571), (u'xss', 0.556), (u'injection', 0.501)]
 ```
 
 ## Word Similarity Dataset
