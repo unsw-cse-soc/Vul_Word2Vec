@@ -45,4 +45,4 @@ print(word_vect.most_similar(positive=['exploit', 'title'], negative=['ubuntu'])
 
 ## Word Similarity Dataset
 Word Similarity dataset is a collection of words for measuring the similarity and relatedness of cyber security words.
-The dataset is available here for download.
+The dataset file is available here for download. The file is in csv format and consists of two columns with word1 and word2.
